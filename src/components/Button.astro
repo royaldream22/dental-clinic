@@ -1,0 +1,20 @@
+---
+import "./Button.css";
+
+interface Props {
+  label?: string;
+  block?: boolean;
+  submit?: boolean;
+}
+
+const { label = "Записатись на прийом", block = false, submit = false } = Astro.props;
+---
+
+<button
+  type={submit ? "submit" : "button"}
+  class:list={["button", { "button--block": block }]}
+  data-open-appointment={submit ? undefined : true}
+>
+  <span class="button__label">{label}</span>
+  <img src="/icons/arrow.svg" width="35" height="35" alt="" />
+</button>

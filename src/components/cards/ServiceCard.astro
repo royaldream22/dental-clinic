@@ -1,0 +1,17 @@
+---
+import "./ServiceCard.css";
+
+interface Props {
+  title: string;
+  image: string;
+  alt: string;
+  tall?: boolean;
+}
+
+const { title, image, alt, tall = false } = Astro.props;
+---
+
+<article class:list={["service-card", { "service-card--tall": tall }]}>
+  <img src={image} alt={alt} />
+  <p>{title}</p>
+</article>

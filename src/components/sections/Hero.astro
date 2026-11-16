@@ -1,0 +1,31 @@
+---
+import "./Hero.css";
+import Button from "../Button.astro";
+import { advantages } from "../../data/site";
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__intro">
+    <h1 id="hero-title">З турботою про вашу <em>здорову</em> посмішку!</h1>
+    <p>Сучасна стоматологія з індивідуальним підходом до кожного пацієнта</p>
+    <Button />
+  </div>
+  <div class="hero__visual">
+    <img src="/images/hero.png" alt="Пацієнтка посміхається на прийомі" />
+    <div class="hero__badges">
+      {advantages.map((item) => <p class="hero__badge">{item}</p>)}
+    </div>
+  </div>
+  <ul class="hero__advantages">
+    {advantages.map((item) => <li>{item}</li>)}
+  </ul>
+  <div class="hero__support">
+    <div class="hero__xray">
+      <img src="/images/xray.jpg" alt="Стоматолог переглядає рентгенівський знімок" />
+    </div>
+    <p class="hero__experience">
+      19 років успішної практики
+      <span class="hero__dots" aria-hidden="true"></span>
+    </p>
+  </div>
+</section>

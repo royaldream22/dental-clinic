@@ -1,0 +1,29 @@
+---
+import "./StepCard.css";
+
+interface Props {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  tone: "light" | "brand";
+  cover?: boolean;
+}
+
+const { title, text, image, alt, tone, cover = false } = Astro.props;
+---
+
+<article
+  class:list={[
+    "step-card",
+    `step-card--${tone}`,
+    { "step-card--cover": cover, "step-card--split": !cover },
+  ]}
+>
+  <div class="step-card__copy">
+    <span class="step-card__mark" aria-hidden="true"></span>
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+  <img src={image} alt={alt} />
+</article>

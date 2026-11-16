@@ -1,0 +1,31 @@
+:root {
+  --color-brand: #7867be;
+  --color-backdrop: #d3e8ff;
+  --color-header: #ecebf1;
+  --color-surface: #edebf2;
+  --color-text: #1e1e1e;
+  --color-muted: #626262;
+  --color-muted-2: #616163;
+  --color-form-text: #29262f;
+  --color-form-muted: #68636f;
+  --color-field: #f8f6fb;
+  --color-field-border: #ddd8e8;
+  --color-white: #ffffff;
+  --color-badge: rgb(255 255 255 / 0.3);
+  --color-photo-tint: #9f96c4;
+  --color-schedule: #d9d9d9;
+  --radius-pill: 50px;
+  --radius-card: 20px;
+  --radius-dialog: 24px;
+  --radius-field: 12px;
+  --container: 1440px;
+  --page-pad: 16px;
+  --font: "Manrope", sans-serif;
+  --shadow-dialog: 0 24px 60px rgb(41 38 47 / 0.16);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --page-pad: 40px;
+  }
+}

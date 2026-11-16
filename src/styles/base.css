@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+	--container: 1440px;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.section {
+  padding: 32px var(--page-pad);
+}
+
+.section__title {
+  font-size: 30px;
+  line-height: 1.12;
+}
+
+.section__title em {
+  font-style: normal;
+  color: var(--color-brand);
+}
+
+.section__lead {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding: 72px var(--page-pad);
+  }
+
+  .section__title {
+    font-size: 54px;
+  }
+
+  .section__lead {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.site-shell {
+  width: 1500px;
+  max-width: var(--container);
+  margin-inline: auto;
+  background: #FAFAFC;
+}

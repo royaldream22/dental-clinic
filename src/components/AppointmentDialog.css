@@ -1,0 +1,131 @@
+.appointment {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.appointment::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.appointment__card {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px 20px;
+  border-radius: var(--radius-dialog);
+  background: var(--color-white);
+  box-shadow: var(--shadow-dialog);
+}
+
+.appointment__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.appointment__heading h2 {
+  flex: 1;
+  color: var(--color-form-text);
+  font-size: 32px;
+  line-height: 1.45;
+}
+
+.appointment__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--color-field);
+  color: var(--color-form-text);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.appointment__note,
+.appointment__consent,
+.appointment__success {
+  color: var(--color-form-muted);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.appointment__consent,
+.appointment__success {
+  font-size: 12px;
+}
+
+.appointment__success {
+  font-size: 16px;
+  color: var(--color-form-text);
+}
+
+.appointment__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appointment__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.appointment__field span {
+  color: var(--color-form-text);
+  font-size: 14px;
+}
+
+.appointment__field input,
+.appointment__field textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-field-border);
+  border-radius: var(--radius-field);
+  background: var(--color-field);
+  color: var(--color-form-text);
+  resize: vertical;
+}
+
+.appointment__field input {
+  height: 56px;
+}
+
+.appointment__field textarea {
+  min-height: 88px;
+}
+
+.appointment__field input::placeholder,
+.appointment__field textarea::placeholder {
+  color: var(--color-form-muted);
+}
+
+.appointment__error {
+  color: #9a3450;
+  font-size: 13px;
+}
+
+.appointment__submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .appointment__card {
+    padding: 40px;
+  }
+
+  .appointment__heading h2 {
+    font-size: 36px;
+  }
+}

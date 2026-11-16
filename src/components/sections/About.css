@@ -1,0 +1,172 @@
+.about__title {
+  font-size: 30px;
+  line-height: 1.12;
+}
+
+.about__title em {
+  font-style: normal;
+  color: var(--color-brand);
+}
+
+.about__lead {
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.about__metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.about__metric,
+.about__recommend {
+  border-radius: 18px;
+  background: var(--color-surface);
+}
+
+.about__metric {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 126px;
+  padding: 16px;
+}
+
+.about__metric--wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about__value {
+  color: var(--color-brand);
+  font-size: 36px;
+  line-height: 1.12;
+}
+
+.about__metric--wide .about__value {
+  font-size: 40px;
+}
+
+.about__label {
+  color: var(--color-muted-2);
+  font-size: 15px;
+}
+
+.about__recommend {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  min-height: 348px;
+  margin-top: 12px;
+  padding: 20px;
+  overflow: hidden;
+  background: var(--color-brand);
+  color: var(--color-white);
+}
+
+.about__recommend .about__value {
+  color: var(--color-white);
+  font-size: 48px;
+}
+
+.about__recommend p {
+  max-width: 220px;
+  font-size: 18px;
+}
+
+.about__recommend img {
+  width: min(100%, 340px);
+  justify-self: end;
+  object-fit: contain;
+}
+
+@media (min-width: 900px) {
+  .about__title {
+    max-width: 940px;
+    margin-left: auto;
+    font-size: 64px;
+  }
+
+  .about__lead {
+    max-width: 715px;
+    margin-left: auto;
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .about__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: min(100%, 840px);
+    margin-left: auto;
+    margin-top: 40px;
+  }
+
+  .about__metric,
+  .about__metric--wide {
+    min-height: 245px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .about__metric--wide {
+    grid-column: auto;
+  }
+
+  .about__value,
+  .about__metric--wide .about__value {
+    font-size: 72px;
+  }
+
+  .about__label {
+    font-size: 20px;
+  }
+
+  .about__recommend {
+    grid-template-columns: minmax(0, 1.8fr) minmax(170px, 1fr);
+    align-items: stretch;
+    width: min(100%, 840px);
+    min-height: 245px;
+    margin-top: 20px;
+    margin-left: auto;
+    padding: 12px;
+    background: var(--color-surface);
+    color: var(--color-muted-2);
+  }
+
+  .about__recommend::before {
+    content: "";
+    position: absolute;
+    inset: 12px auto 12px 12px;
+    width: calc((100% - 24px) * 0.643);
+    border-radius: 14px;
+    background: var(--color-brand);
+  }
+
+  .about__recommend > div {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    z-index: 1;
+  }
+
+  .about__recommend img {
+    width: 280px;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: end;
+    z-index: 1;
+    object-position: center bottom;
+  }
+
+  .about__recommend .about__value {
+    color: var(--color-muted-2);
+  }
+}

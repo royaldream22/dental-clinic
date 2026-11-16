@@ -1,0 +1,38 @@
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.doctor-card img {
+  width: 100%;
+  aspect-ratio: 173 / 186;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.doctor-card h3 {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.doctor-card p {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+@media (min-width: 900px) {
+  .doctor-card img {
+    aspect-ratio: 325 / 350;
+    border-radius: var(--radius-card);
+  }
+
+  .doctor-card h3,
+  .doctor-card p {
+    font-size: 18px;
+  }
+}

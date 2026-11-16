@@ -1,0 +1,19 @@
+---
+import "./Doctors.css";
+import DoctorCard from "../cards/DoctorCard.astro";
+import { doctors } from "../../data/site";
+---
+
+<section class="section doctors" id="doctors" aria-labelledby="doctors-title">
+  <h2 class="section__title doctors__title" id="doctors-title">
+    Команда, яка створює вашу неповторну усмішку
+  </h2>
+  <p class="section__lead doctors__lead">
+    Наші лікарі — професіонали з багаторічним досвідом, безмежно закохані у свою справу. Вони
+    безперервно вдосконалюють свою майстерність, щоб забезпечити вам бездоганний результат і європейські
+    стандарти турботи.
+  </p>
+  <div class="doctors__grid">
+    {doctors.map((doctor) => <DoctorCard {...doctor} />)}
+  </div>
+</section>

@@ -1,0 +1,130 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 32px var(--page-pad);
+  background: var(--color-brand);
+  color: var(--color-white);
+}
+
+.footer__logo {
+  width: 35px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.footer__phone img {
+  width: 20px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.footer__phones--desktop,
+.footer__schedule {
+  display: none;
+}
+
+.footer__nav,
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.footer__credits {
+  gap: 8px;
+}
+
+.footer__copy {
+  margin: 0;
+  font-size: 12px;
+}
+
+.footer__demo {
+  margin: 0;
+  max-width: 720px;
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 1.45;
+}
+
+@media (min-width: 900px) {
+  .footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "nav schedule phones"
+      "credits demo copy";
+    gap: 32px 48px;
+    align-items: start;
+    padding: 44px var(--page-pad) 28px;
+  }
+
+  .footer__logo,
+  .footer__phone--mobile {
+    display: none;
+  }
+
+  .footer__nav {
+    grid-area: nav;
+    gap: 10px;
+    font-size: 20px;
+  }
+
+  .footer__schedule {
+    grid-area: schedule;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-self: center;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .footer__schedule-label {
+    color: var(--color-schedule);
+  }
+
+  .footer__schedule-light {
+    font-weight: 200;
+  }
+
+  .footer__schedule-strong {
+    font-weight: 700;
+  }
+
+  .footer__phones--desktop {
+    grid-area: phones;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-self: end;
+  }
+
+  .footer__credits {
+    grid-area: credits;
+    flex-direction: row;
+    gap: 16px;
+    align-self: end;
+  }
+
+  .footer__demo {
+    grid-area: demo;
+  }
+
+  .footer__copy {
+    grid-area: copy;
+    justify-self: end;
+    align-self: end;
+  }
+}

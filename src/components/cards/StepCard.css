@@ -1,0 +1,110 @@
+.step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.step-card__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-card--brand {
+  background: var(--color-brand);
+  color: var(--color-white);
+}
+
+.step-card__mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 11px, currentColor 12px, currentColor 14px, transparent 15px);
+  color: var(--color-brand);
+}
+
+.step-card--brand .step-card__mark {
+  color: var(--color-white);
+}
+
+.step-card h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.step-card--light h3 {
+  color: var(--color-brand);
+}
+
+.step-card p {
+  font-size: 16px;
+}
+
+.step-card img {
+  width: 100%;
+  aspect-ratio: 326 / 204;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+@media (min-width: 900px) {
+  .step-card {
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .step-card--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 0.9fr);
+    align-items: center;
+    gap: 16px;
+  }
+
+  .step-card--split img {
+    aspect-ratio: 16 / 10;
+    height: 100%;
+  }
+
+  .step-card--cover {
+    position: relative;
+    justify-content: flex-end;
+    min-height: 250px;
+    overflow: hidden;
+    color: var(--color-white);
+    background: var(--color-brand);
+  }
+
+  .step-card--cover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: 0;
+  }
+
+  .step-card--cover .step-card__copy {
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-card--cover h3,
+  .step-card--cover p {
+    color: var(--color-white);
+    text-shadow: 0 1px 8px rgb(0 0 0 / 0.35);
+  }
+
+  .step-card--cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(120 103 190 / 0.15), rgb(30 30 30 / 0.45));
+  }
+}

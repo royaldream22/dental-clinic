@@ -1,0 +1,16 @@
+---
+import "./Treatment.css";
+import Button from "../Button.astro";
+import StepCard from "../cards/StepCard.astro";
+import { steps } from "../../data/site";
+---
+
+<section class="section treatment" id="treatment" aria-labelledby="treatment-title">
+  <h2 class="section__title treatment__title" id="treatment-title">
+    Як проходить лікування в <em>нашій клініці</em>
+  </h2>
+  <div class="treatment__grid">
+    {steps.map((step) => <StepCard {...step} />)}
+  </div>
+  <Button block />
+</section>

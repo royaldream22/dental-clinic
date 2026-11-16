@@ -1,0 +1,20 @@
+---
+import "./Contact.css";
+import { contactPhone, email } from "../../data/site";
+---
+
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <h2 class="section__title contact__title" id="contact-title">
+    Чекаємо на вас в <em>нашій</em> клініці
+  </h2>
+  <div class="contact__layout">
+    <address class="contact__card">
+      <p>місто Чугуїв</p>
+      <p>вул. Старонікольська, 100</p>
+      <p>email: <a href={email.href}>{email.label}</a></p>
+      <p>тел. <a href={contactPhone.href}>{contactPhone.label}</a></p>
+      <img src="/icons/logo-white.svg" width="76" height="109" alt="" />
+    </address>
+    <img class="contact__map" src="/images/map.png" alt="Карта з розташуванням клініки в Чугуєві" />
+  </div>
+</section>

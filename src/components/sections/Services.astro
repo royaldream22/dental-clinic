@@ -1,0 +1,22 @@
+---
+import "./Services.css";
+import Button from "../Button.astro";
+import ServiceCard from "../cards/ServiceCard.astro";
+import { services } from "../../data/site";
+---
+
+<section class="section services" id="services" aria-labelledby="services-title">
+  <div class="services__header">
+    <h2 class="section__title" id="services-title">
+      Ми пропонуємо повний спектр стоматологічних послуг для всієї родини
+    </h2>
+    <p class="section__lead services__lead">
+      Від профілактики до складного протезування — всі процедури виконуються з використанням сучасних
+      технологій і високоякісних матеріалів.
+    </p>
+  </div>
+  <div class="services__grid">
+    {services.map((service) => <ServiceCard {...service} />)}
+  </div>
+  <Button />
+</section>

@@ -1,0 +1,57 @@
+---
+import "./Header.css";
+import MobileMenu from "./MobileMenu.astro";
+import { navigation, phone } from "../data/site";
+---
+
+<header class="header" id="top" data-header>
+  <div class="header__bar">
+    <a class="header__logo" href="#top" aria-label="На початок сторінки">
+      <img src="/icons/logo.svg" width="35" height="50" alt="" />
+    </a>
+    <nav class="header__nav" aria-label="Головне меню">
+      {
+        navigation.map((item) => <a href={item.href}>{item.label}</a>)
+      }
+    </nav>
+    <a class="header__phone header__phone--desktop" href={phone.href}>
+      <img src="/icons/phone.svg" width="20" height="26" alt="" />
+      {phone.label}
+    </a>
+    <a class="header__phone header__phone--mobile" href={phone.href}>{phone.label}</a>
+    <button
+      class="header__burger"
+      type="button"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <img class="header__burger-icon header__burger-icon--closed" src="/icons/burger-dark.svg" width="30" height="19" alt="" />
+      <img class="header__burger-icon header__burger-icon--open" src="/icons/burger.svg" width="30" height="19" alt="" />
+      <span class="header__burger-label">Меню</span>
+    </button>
+  </div>
+  <MobileMenu />
+</header>
+
+<style>
+  .header__burger-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .header__burger {
+    position: relative;
+  }
+</style>
+
+<script>
+  import "../scripts/menu.js";
+</script>

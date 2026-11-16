@@ -1,0 +1,29 @@
+---
+import "./ReviewCard.css";
+
+interface Props {
+  name?: string;
+  text?: string;
+  avatar?: string;
+  image?: string;
+  alt?: string;
+}
+
+const { name, text, avatar, image, alt = "" } = Astro.props;
+---
+
+{
+  image ? (
+    <article class="review-card review-card--photo">
+      <img src={image} alt={alt} />
+    </article>
+  ) : (
+    <article class="review-card">
+      <div class="review-card__person">
+        <img src={avatar} alt="" />
+        <p>{name}</p>
+      </div>
+      <p>{text}</p>
+    </article>
+  )
+}

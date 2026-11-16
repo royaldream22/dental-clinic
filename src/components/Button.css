@@ -1,0 +1,54 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 8px 8px 8px 16px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: scale(1.03);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+.button__label {
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.button img {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  transition: transform 0.2s ease;
+}
+
+.button:hover img,
+.button:focus-visible img {
+  transform: rotate(-125deg);
+}
+
+.button--block {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .button {
+    height: 45px;
+    width: auto;
+  }
+}

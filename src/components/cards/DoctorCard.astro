@@ -1,0 +1,17 @@
+---
+import "./DoctorCard.css";
+
+interface Props {
+  name: string;
+  role: string;
+  image: string;
+}
+
+const { name, role, image } = Astro.props;
+---
+
+<article class="doctor-card">
+  <img src={image} alt="" />
+  <h3>{name}</h3>
+  <p>{role}</p>
+</article>

@@ -1,0 +1,27 @@
+.doctors__lead {
+  max-width: 845px;
+  color: var(--color-muted);
+}
+
+.doctors__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 12px;
+  margin-top: 24px;
+}
+
+@media (min-width: 900px) {
+  .doctors__title,
+  .doctors__lead {
+    max-width: 845px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  .doctors__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+}

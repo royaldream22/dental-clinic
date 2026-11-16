@@ -1,0 +1,52 @@
+---
+import "./AppointmentDialog.css";
+import Button from "./Button.astro";
+---
+
+<dialog class="appointment" data-appointment aria-labelledby="appointment-title">
+  <div class="appointment__card">
+    <div class="appointment__heading">
+      <h2 id="appointment-title">Запис на прийом</h2>
+      <button class="appointment__close" type="button" data-close-appointment aria-label="Закрити форму">
+        ×
+      </button>
+    </div>
+    <p class="appointment__note">
+      Залиште контакти — ми зателефонуємо, щоб узгодити зручний день і час.
+    </p>
+    <form data-appointment-form novalidate>
+      <div data-appointment-fields>
+        <div class="appointment__fields">
+          <label class="appointment__field">
+            <span>Ім’я *</span>
+            <input name="name" type="text" autocomplete="name" placeholder="Як до вас звертатися?" required />
+            <small class="appointment__error" data-error-for="name" hidden></small>
+          </label>
+          <label class="appointment__field">
+            <span>Телефон *</span>
+            <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+380 __ ___ __ __" required />
+            <small class="appointment__error" data-error-for="phone" hidden></small>
+          </label>
+          <label class="appointment__field">
+            <span>Коментар · необов’язково</span>
+            <textarea name="comment" placeholder="Ваше запитання або побажання"></textarea>
+          </label>
+        </div>
+        <div class="appointment__submit">
+          <Button submit />
+          <p class="appointment__consent">
+            Натискаючи «Записатись на прийом», ви погоджуєтеся на обробку персональних даних для зв’язку
+            щодо запису. У цій демонстрації дані не надсилаються.
+          </p>
+        </div>
+      </div>
+      <p class="appointment__success" data-appointment-success hidden>
+        Це демонстраційна форма. Дані нікуди не надсилаються і не зберігаються.
+      </p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  import "../scripts/appointment.js";
+</script>

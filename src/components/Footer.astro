@@ -1,0 +1,51 @@
+---
+import "./Footer.css";
+import { navigation, phone, schedule } from "../data/site";
+---
+
+<footer class="footer">
+  <img class="footer__logo" src="/icons/logo-white.svg" width="35" height="50" alt="" />
+  <a class="footer__phone footer__phone--mobile" href={phone.href}>
+    <img src="/icons/phone-white.svg" width="20" height="26" alt="" />
+    {phone.label}
+  </a>
+  <nav class="footer__nav" aria-label="Меню в підвалі">
+    {
+      navigation.map((item) => <a href={item.href}>{item.label}</a>)
+    }
+  </nav>
+  <div class="footer__schedule">
+    {
+      schedule.map((item) => (
+        <p
+          class:list={[
+            { "footer__schedule-label": item.muted },
+            { "footer__schedule-light": item.light },
+            { "footer__schedule-strong": item.strong },
+          ]}
+        >
+          {item.label}
+        </p>
+      ))
+    }
+  </div>
+  <div class="footer__phones--desktop">
+    {
+      [0, 1, 2].map(() => (
+        <a class="footer__phone" href={phone.href}>
+          <img src="/icons/phone-white.svg" width="20" height="26" alt="" />
+          {phone.label}
+        </a>
+      ))
+    }
+  </div>
+  <div class="footer__credits">
+    <p>gmotion.studio</p>
+    <p>2026</p>
+  </div>
+  <p class="footer__demo">
+    Демонстраційний проєкт. Імена лікарів, відгуки, статистика, адреса, телефони та акції наведені як
+    приклад і не є підтвердженими даними реальної клініки.
+  </p>
+  <p class="footer__copy">Всі права захищені 2026</p>
+</footer>

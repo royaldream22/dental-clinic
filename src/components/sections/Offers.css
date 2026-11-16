@@ -1,0 +1,262 @@
+
+
+.offers {
+  border-radius: var(--radius-card);
+  background: var(--color-header);
+  border-radius: 20px;
+}
+
+.offers__title em {
+  font-style: normal;
+  color: var(--color-brand);
+}
+
+.offers__grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.offer,
+.offers__social {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+}
+
+.offer--friday {
+  gap: 5px;
+  padding: 0 20px 20px;
+  background: var(--color-brand);
+  color: var(--color-white);
+}
+
+.offer img,
+.offers__social img.offers__photo {
+  width: 100%;
+  aspect-ratio: 318 / 212;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.offer__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  padding: 9px 16px;
+  border-radius: 30px;
+  background: var(--color-brand);
+  color: var(--color-white);
+  font-size: 32px;
+  line-height: 1;
+}
+
+.offer--friday .offer__badge {
+  background: var(--color-white);
+  color: var(--color-brand);
+}
+
+.offer__badge::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.offer h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.offer--friday h3,
+.offer--friday p,
+.offer--hygiene h3,
+.offer--hygiene p {
+  color: inherit;
+}
+
+.offer--hygiene {
+  color: var(--color-brand);
+
+}
+
+.offer--hygiene .offer__badge {
+  color: var(--color-white);
+}
+
+.offers__social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.offers__social-icons img {
+  width: 44px;
+  height: 44px;
+}
+
+.offers__social p {
+  color: var(--color-muted);
+  
+}
+
+.offers__subscribe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: fit-content;
+  height: 50px;
+  padding: 8px 8px 8px 16px;
+  border-radius: 30px;
+  background: var(--color-brand);
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.offers__social .offers__subscribe {
+  color: var(--color-white);
+}
+
+.offers__subscribe img {
+  width: 35px;
+  height: 35px;
+}
+
+@media (min-width: 900px) {
+  .offers {
+    border-radius: var(--radius-card);
+    background: var(--color-header);
+  }
+
+  .offers__top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 24px;
+    align-items: end;
+  }
+
+  .offers__title {
+    max-width: 808px;
+  }
+
+  .offers__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+  }
+
+  .offers__social {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-rows: 1fr auto;
+    gap: 20px 32px;
+    align-items: center;
+    aspect-ratio: 4.5 / 1;
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .offers__photo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .offer {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 12px 0;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 2.2 / 1;
+    padding: 28px;
+    overflow: hidden;
+  }
+
+  .offer--friday {
+    gap: 12px 0;
+    padding: 28px;
+  }
+
+  .offer__badge {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-size: clamp(24px, 2.4vw, 32px);
+  }
+
+  .offer h3 {
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 1;
+    align-self: center;
+    max-width: 100%;
+    font-size: clamp(20px, 2.2vw, 30px);
+    line-height: 1.15;
+  }
+
+  .offer > p:not(.offer__badge) {
+    grid-column: 1;
+    grid-row: 3;
+    z-index: 1;
+    align-self: end;
+    font-size: clamp(14px, 1.4vw, 20px);
+  }
+
+  .offer > img {
+    position: absolute;
+    top: 8%;
+    right: 2%;
+    width: 48%;
+    height: 84%;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 0;
+  }
+
+  .offer--hygiene > img {
+    top: 8%;
+    right: 4%;
+    width: 48%;
+    height: 84%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  .offers__social-icons {
+    grid-column: 2 / 4;
+    grid-row: 1;
+  }
+
+  .offers__social > p:not(.offers__subscribe) {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+  }
+
+  .offers__subscribe {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .offer--friday img {
+    order: -1;
+  }
+}

@@ -1,0 +1,11 @@
+---
+import { navigation } from "../data/site";
+---
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+  <nav class="mobile-menu__nav" aria-label="Мобільне меню">
+    {
+      navigation.map((item) => <a href={item.href}>{item.label}</a>)
+    }
+  </nav>
+</div>

@@ -1,0 +1,39 @@
+---
+import "./Offers.css";
+import Button from "../Button.astro";
+---
+
+<section class="section offers" id="offers" aria-labelledby="offers-title">
+  <div class="offers__top">
+    <h2 class="section__title offers__title" id="offers-title">
+      Спеціальні <em>пропозиції</em> та акційні програми
+    </h2>
+    <Button />
+  </div>
+  <div class="offers__grid">
+    <article class="offer offer--friday">
+      <img src="/images/offer-microscope.png" alt="Дентальний мікроскоп у кабінеті" />
+      <p>на терапію під мікроскопом</p>
+      <h3>Знижка кожної пʼятниці</h3>
+      <p class="offer__badge">20%</p>
+    </article>
+    <article class="offer offer--hygiene">
+      <p class="offer__badge">30%</p>
+      <h3>Знижка на проф гігієну</h3>
+      <p>до кінця 2026 року</p>
+      <img src="/images/offer-hygiene.png" alt="Професійна гігієна зубів" />
+    </article>
+    <article class="offers__social">
+      <img class="offers__photo" src="/images/offer-social.png" alt="Пацієнт у стоматологічному кріслі" />
+      <div class="offers__social-icons">
+        <img src="/icons/facebook.svg" width="44" height="44" alt="Facebook" />
+        <img src="/icons/instagram.svg" width="44" height="44" alt="Instagram" />
+      </div>
+      <p>Підписатися на наші соц мережі, щоб бути в курсі всіх подій та знижок</p>
+      <p class="offers__subscribe">
+        Підписатися
+        <img src="/icons/arrow.svg" width="35" height="35" alt="" />
+      </p>
+    </article>
+  </div>
+</section>
