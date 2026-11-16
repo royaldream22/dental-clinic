@@ -118,6 +118,12 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  margin-top: 18px;
+}
+
+.appointment__submit .button {
+  width: fit-content;
+  max-width: 100%;
 }
 
 @media (min-width: 900px) {
@@ -127,5 +133,32 @@
 
   .appointment__heading h2 {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 899px) {
+  .appointment {
+    width: min(560px, calc(100% - 24px));
+    max-height: calc(100dvh - 24px);
+    overflow: auto;
+  }
+
+  .appointment__card {
+    gap: 16px;
+    padding: 18px 16px;
+  }
+
+  .appointment__heading h2 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .appointment__fields {
+    gap: 12px;
+  }
+
+  .appointment__field input {
+    height: 48px;
+    padding: 12px 14px;
   }
 }

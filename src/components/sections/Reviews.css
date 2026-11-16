@@ -46,3 +46,27 @@
     justify-self: end;
   }
 }
+
+@media (max-width: 899px) {
+  .reviews {
+    border-radius: 20px;
+    background: var(--color-surface);
+  }
+
+  .reviews__grid {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .reviews__more {
+    gap: 10px;
+    margin-top: 12px;
+    padding: 6px 6px 6px 14px;
+    font-size: 15px;
+  }
+
+  .reviews__more img {
+    width: 28px;
+    height: 28px;
+  }
+}

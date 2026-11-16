@@ -231,10 +231,12 @@
   }
 
   .offer--hygiene > img {
-    top: 8%;
-    right: 4%;
-    width: 48%;
-    height: 84%;
+    top: 50%;
+    right: 5%;
+    width: 38%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    transform: translateY(-50%);
     object-fit: cover;
     border-radius: 14px;
   }
@@ -258,5 +260,140 @@
 
   .offer--friday img {
     order: -1;
+  }
+}
+
+@media (max-width: 899px) {
+  .offers__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .offers__top .button {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .offers__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    aspect-ratio: auto;
+    min-height: 0;
+    padding: 0 0 12px;
+    overflow: hidden;
+  }
+
+  .offer--friday {
+    gap: 6px;
+    padding: 0 0 12px;
+  }
+
+  .offer > img {
+    order: 0;
+    width: 100%;
+    height: clamp(80px, 28vw, 100px);
+    margin: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 12px;
+  }
+
+  .offer__badge {
+    order: 1;
+    gap: 6px;
+    margin: 4px 12px 0;
+    padding: 4px 10px;
+    font-size: 18px;
+  }
+
+  .offer__badge::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .offer h3 {
+    order: 2;
+    margin-inline: 12px;
+    font-size: 15px;
+    line-height: 1.15;
+  }
+
+  .offer > p:not(.offer__badge) {
+    order: 3;
+    margin-inline: 12px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .offer--hygiene > img {
+    width: calc(100% - 10px);
+    margin: 5px auto 0;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .offers__social {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-areas:
+      "photo icons"
+      "photo text"
+      "photo cta";
+    align-items: center;
+    gap: 8px 12px;
+    padding: 12px;
+  }
+
+  .offers__social img.offers__photo {
+    grid-area: photo;
+    width: 96px;
+    height: 100%;
+    min-height: 132px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .offers__social-icons {
+    grid-area: icons;
+    gap: 10px;
+  }
+
+  .offers__social-icons img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .offers__social > p:not(.offers__subscribe) {
+    grid-area: text;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .offers__subscribe {
+    grid-area: cta;
+    gap: 8px;
+    height: 40px;
+    padding: 4px 4px 4px 12px;
+    font-size: 14px;
+  }
+
+  .offers__subscribe img {
+    width: 28px;
+    height: 28px;
   }
 }

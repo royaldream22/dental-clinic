@@ -215,3 +215,105 @@
       radial-gradient(circle at 50% 110px, #c4bed6 32px, transparent 33px);
   }
 }
+
+@media (max-width: 899px) {
+  .hero {
+    gap: 10px;
+    padding: 8px 16px 24px;
+  }
+
+  .hero__intro {
+    padding: 16px;
+  }
+
+  .hero__intro h1 {
+    font-size: clamp(28px, 8.2vw, 34px);
+    line-height: 1.12;
+  }
+
+  .hero__intro p {
+    margin: 8px 0 14px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .hero__intro .button {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero__visual {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px 0 0px;
+  }
+
+  .hero__visual img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1000 / 667;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .hero__advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .hero__advantages li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    background: var(--color-surface);
+    line-height: 1.25;
+  }
+
+  .hero__advantages li::before {
+    content: "";
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-brand);
+  }
+
+  .hero__support {
+    gap: 10px;
+  }
+
+  .hero__xray,
+  .hero__xray img,
+  .hero__experience {
+    min-height: 108px;
+  }
+
+  .hero__xray img {
+    object-position: center 40%;
+  }
+
+  .hero__experience {
+    padding: 12px;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 899px) {
+  .hero__xray,
+  .hero__xray img,
+  .hero__experience {
+    min-height: 168px;
+  }
+
+  .hero__experience {
+    font-size: 20px;
+  }
+}

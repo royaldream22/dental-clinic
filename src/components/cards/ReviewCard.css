@@ -52,3 +52,50 @@
     height: 350px;
   }
 }
+
+@media (max-width: 899px) {
+  .review-card {
+    gap: 10px;
+    padding: 14px;
+    background: var(--color-white);
+  }
+
+  .review-card__person {
+    gap: 10px;
+  }
+
+  .review-card__person img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .review-card__person p {
+    font-size: 15px;
+  }
+
+  .review-card > p {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .review-card--photo {
+    width: min(270px, 82%);
+    height: auto;
+    margin-inline: auto;
+    justify-self: center;
+    padding: 0;
+    overflow: hidden;
+    background: var(--color-brand);
+  }
+
+  .review-card--photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 4;
+    max-width: none;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center 13%;
+  }
+}

@@ -68,3 +68,28 @@
     margin-top: 0;
   }
 }
+
+@media (max-width: 899px) {
+  .contact__card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 12px;
+    margin-top: 14px;
+    padding: 18px;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .contact__card img {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    align-self: center;
+    width: 46px;
+  }
+
+  .contact__map {
+    height: 168px;
+    margin-top: 10px;
+    object-position: center;
+  }
+}

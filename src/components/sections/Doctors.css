@@ -25,3 +25,10 @@
     margin-top: 48px;
   }
 }
+
+@media (max-width: 899px) {
+  .doctors__grid {
+    gap: 14px 10px;
+    margin-top: 16px;
+  }
+}
