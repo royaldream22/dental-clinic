@@ -126,7 +126,7 @@
   max-width: 100%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .appointment__card {
     padding: 40px;
   }
@@ -136,7 +136,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .appointment {
     width: min(560px, calc(100% - 24px));
     max-height: calc(100dvh - 24px);

@@ -84,7 +84,7 @@
   object-fit: contain;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .about__title {
     max-width: 940px;
     margin-left: auto;
@@ -171,7 +171,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .about__title {
     font-size: 26px;
     line-height: 1.15;

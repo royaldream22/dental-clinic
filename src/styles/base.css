@@ -70,7 +70,7 @@ h2 {
   line-height: 1.4;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .section {
     padding: 72px var(--page-pad);
   }
@@ -92,7 +92,7 @@ h2 {
   background: #FAFAFC;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .section,
   .hero {
     scroll-margin-top: 76px;

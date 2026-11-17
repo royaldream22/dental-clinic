@@ -101,7 +101,7 @@
   display: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -245,7 +245,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .hero {
     gap: 10px;
     padding: 8px 16px 24px;
@@ -365,7 +365,7 @@
   }
 }
 
-@media (min-width: 640px) and (max-width: 899px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .hero__xray,
   .hero__xray img {
     min-height: 168px;

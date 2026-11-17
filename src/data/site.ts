@@ -32,27 +32,27 @@ export const advantages = [
 export const services = [
   {
     title: "Естетична стоматологія",
-    image: "/images/service-aesthetic.jpg",
+    image: "/images/service-aesthetic.webp",
     alt: "Підбір відтінку емаль для естетичної реставрації",
   },
   {
     title: "Імплантація",
-    image: "/images/service-implant.jpg",
+    image: "/images/service-implant.webp",
     alt: "Діагностичне сканування перед імплантацією",
   },
   {
     title: "Лікування під мікроскопом",
-    image: "/images/service-microscope.jpg",
+    image: "/images/service-microscope.webp",
     alt: "Лікар працює з дентальним мікроскопом",
   },
   {
     title: "Ортодонтологія",
-    image: "/images/service-ortho.jpg",
+    image: "/images/service-ortho.webp",
     alt: "Огляд пацієнта з брекет-системою",
   },
   {
     title: "Професійна гігієна",
-    image: "/images/service-hygiene.jpg",
+    image: "/images/service-hygiene.webp",
     alt: "Робота з моделлю зубного ряду",
     tall: true,
   },
@@ -62,22 +62,22 @@ export const doctors = [
   {
     name: "Наумова Вікторія Олегівна",
     role: "Стоматолог-терапевт",
-    image: "/images/doctor-naumova.png",
+    image: "/images/doctor-naumova.webp",
   },
   {
     name: "Петрова Анна Миколаївна",
     role: "Стоматолог-ортодонт",
-    image: "/images/doctor-petrova.png",
+    image: "/images/doctor-petrova.webp",
   },
   {
     name: "Жмих Ілля Ігоревич",
     role: "Доктор медичних наук",
-    image: "/images/doctor-zhmykh.png",
+    image: "/images/doctor-zhmykh.webp",
   },
   {
     name: "Волкова Алліна Павлівна",
     role: "Ортодонт",
-    image: "/images/doctor-volkova.png",
+    image: "/images/doctor-volkova.webp",
   },
 ];
 
@@ -85,21 +85,21 @@ export const reviews = [
   {
     name: "Олена К.",
     text: "Неймовірна клініка відтепер тільки сюди ходитиму лікарі максимально чуйні та турботливі взагалі нічого не відчула під час лікування хоча з дитинства панічно боялася стоматологів тепер усім рекомендую!",
-    avatar: "/images/avatar-olena.png",
+    avatar: "/images/avatar-olena.webp",
   },
   {
     name: "Сергій Т.",
     text: "Сервіс просто на найвищому рівні зубки полікували під мікроскопом дуже швидко та якісно персонал привітний пригостили смачною кавою а інтер'єр такий затишний що забуваєш де знаходишся",
-    avatar: "/images/avatar-serhii.png",
+    avatar: "/images/avatar-serhii.webp",
   },
   {
-    image: "/images/smile.png",
+    image: "/images/smile.webp",
     alt: "Посмішка пацієнтки",
   },
   {
     name: "Таісія Ф",
     text: "Дуже задоволена результатом робила тут професійну чистку та відбілювання посмішка тепер просто сяє ціни повністю прозорі без жодних прихованих доплат щиро дякую за таку красу та комфорт",
-    avatar: "/images/avatar-taisia.png",
+    avatar: "/images/avatar-taisia.webp",
   },
 ];
 
@@ -107,14 +107,14 @@ export const steps = [
   {
     title: "Крок 1. Запис",
     text: "запис онлайн або по телефону",
-    image: "/images/step-booking.png",
+    image: "/images/step-booking.webp",
     alt: "Адміністратор клініки біля стійки реєстрації",
     tone: "light" as const,
   },
   {
     title: "Крок 2. Огляд",
     text: "Діагностика та складання плану лікування",
-    image: "/images/service-microscope.jpg",
+    image: "/images/service-microscope.webp",
     alt: "Огляд пацієнта в стоматологічному кабінеті",
     tone: "brand" as const,
     cover: true,
@@ -122,7 +122,7 @@ export const steps = [
   {
     title: "Крок 3. Лікування",
     text: "Лікування до повного одужання",
-    image: "/images/offer-hygiene.png",
+    image: "/images/offer-hygiene.webp",
     alt: "Лікар під час прийому",
     tone: "light" as const,
     cover: true,
@@ -130,7 +130,7 @@ export const steps = [
   {
     title: "Крок 4. Дотримання гігієни",
     text: "Дотримання рекомендацій лікаря по догляду",
-    image: "/images/step-hygiene.png",
+    image: "/images/step-hygiene.webp",
     alt: "Доглянуті зуби крупним планом",
     tone: "brand" as const,
   },

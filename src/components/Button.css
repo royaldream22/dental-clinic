@@ -46,7 +46,7 @@
   width: 100%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .button {
     height: 45px;
     width: auto;

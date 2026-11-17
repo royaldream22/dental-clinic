@@ -26,7 +26,7 @@ if (header && toggle && menu) {
     }
   });
 
-  window.matchMedia("(min-width: 900px)").addEventListener("change", (event) => {
+  window.matchMedia("(min-width: 960px)").addEventListener("change", (event) => {
     if (event.matches) setOpen(false);
   });
 }

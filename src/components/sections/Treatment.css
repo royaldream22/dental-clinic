@@ -14,7 +14,7 @@
   margin-top: 24px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .treatment {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -50,7 +50,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .treatment__grid {
     grid-template-columns: 1fr 1fr;
     gap: 8px;

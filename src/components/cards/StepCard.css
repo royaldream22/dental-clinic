@@ -54,7 +54,7 @@
   border-radius: 14px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .step-card {
     min-height: 250px;
     padding: 20px;
@@ -109,7 +109,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .step-card {
     display: flex;
     flex-direction: column;
@@ -150,7 +150,7 @@
   }
 }
 
-@media (min-width: 640px) and (max-width: 899px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .step-card img {
     height: 140px;
   }

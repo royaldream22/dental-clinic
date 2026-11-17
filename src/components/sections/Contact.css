@@ -39,7 +39,7 @@
   border-radius: var(--radius-card);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .contact {
     border-radius: 0;
     background: transparent;
@@ -72,7 +72,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .contact__card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;

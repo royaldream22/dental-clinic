@@ -145,7 +145,7 @@
   transform: rotate(-125deg);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .offers {
     border-radius: var(--radius-card);
     background: var(--color-header);
@@ -276,7 +276,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .offers__top {
     display: flex;
     flex-direction: column;

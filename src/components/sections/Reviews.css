@@ -36,7 +36,7 @@
   transform: rotate(-125deg);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .reviews__head {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 959px) {
   .reviews {
     border-radius: 20px;
     background: var(--color-surface);
