@@ -16,11 +16,24 @@
   color: var(--color-white);
   font-size: 18px;
   line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .reviews__more img {
   width: 35px;
   height: 35px;
+  transition: transform 0.2s ease;
+}
+
+.reviews__more:hover,
+.reviews__more:focus-visible {
+  transform: scale(1.03);
+}
+
+.reviews__more:hover img,
+.reviews__more:focus-visible img {
+  transform: rotate(-125deg);
 }
 
 @media (min-width: 900px) {

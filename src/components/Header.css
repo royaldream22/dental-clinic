@@ -189,12 +189,14 @@
     font-size: 16px;
     font-weight: 600;
     white-space: nowrap;
+    
   }
 
   .header__phone--desktop img {
     width: 20px;
     height: 26px;
     object-fit: contain;
+    transform: rotate(290deg);
   }
 
   .header__phone--mobile,
