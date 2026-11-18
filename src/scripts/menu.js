@@ -3,10 +3,39 @@ const toggle = document.querySelector("[data-menu-toggle]");
 const menu = document.querySelector("[data-mobile-menu]");
 
 if (header && toggle && menu) {
+  let frame = 0;
+  let hideTimer = 0;
+
+  const hideIfClosed = () => {
+    if (toggle.getAttribute("aria-expanded") !== "true") menu.hidden = true;
+  };
+
   const setOpen = (open) => {
-    header.classList.toggle("header--open", open);
     toggle.setAttribute("aria-expanded", String(open));
-    menu.hidden = !open;
+    window.clearTimeout(hideTimer);
+    window.cancelAnimationFrame(frame);
+
+    if (open) {
+      menu.hidden = false;
+      frame = window.requestAnimationFrame(() => {
+        frame = window.requestAnimationFrame(() => {
+          if (toggle.getAttribute("aria-expanded") === "true") {
+            header.classList.add("header--open");
+          }
+        });
+      });
+      return;
+    }
+
+    header.classList.remove("header--open");
+    menu.addEventListener(
+      "transitionend",
+      (event) => {
+        if (event.target === menu) hideIfClosed();
+      },
+      { once: true },
+    );
+    hideTimer = window.setTimeout(hideIfClosed, 400);
   };
 
   toggle.addEventListener("click", () => {

@@ -1,5 +1,6 @@
 .header {
   padding: 12px var(--page-pad);
+  transition: background-color 0.32s ease;
 }
 
 .header__bar {
@@ -10,6 +11,7 @@
   padding: 14px 25px;
   border-radius: 32px;
   background: var(--color-header);
+  transition: background-color 0.32s ease, border-radius 0.32s ease;
 }
 
 .header__logo {
@@ -34,6 +36,7 @@
   color: var(--color-brand);
   font-size: 16px;
   line-height: 1.4;
+  transition: color 0.32s ease;
 }
 
 .header__burger {
@@ -48,6 +51,7 @@
   background: transparent;
   color: var(--color-brand);
   cursor: pointer;
+  transition: color 0.32s ease;
 }
 
 .header__burger-icon {
@@ -107,16 +111,42 @@
 }
 
 .mobile-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 30px;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.32s ease,
+    padding 0.32s ease,
+    opacity 0.24s ease;
+}
+
+.header--open .mobile-menu {
+  grid-template-rows: 1fr;
   padding: 8px 30px 24px;
+  opacity: 1;
 }
 
 .mobile-menu__nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-height: 0;
+  overflow: hidden;
   color: var(--color-white);
   font-size: 20px;
   line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .header__bar,
+  .header__phone--mobile,
+  .header__burger,
+  .mobile-menu {
+    transition: none;
+  }
 }
 
 .header--open {
