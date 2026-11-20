@@ -4,12 +4,18 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const {
   title = "Стоматологія Dental",
   description = "Демонстраційний сайт стоматологічної клініки. Імена, відгуки, статистика, адреса, телефони та акції наведені як приклад.",
+  image = "/og-image.jpg",
 } = Astro.props;
+
+// Абсолютні адреси потрібні для превью в Telegram, Viber, соцмережах
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
 ---
 
 <html lang="uk">
@@ -21,6 +27,22 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="robots" content="noindex" />
+
+    <!-- Open Graph: превью ссылки в мессенджерах -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:site_name" content="Smile Dental" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,8 +52,8 @@ const {
     <title>{title}</title>
   </head>
   <body>
-  <div class="site-shell">
-    <slot />
+    <div class="site-shell">
+      <slot />
     </div>
   </body>
 </html>
